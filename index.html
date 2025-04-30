@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ottavio Lucri De Souza - Fotografia Esportiva (Beach Tennis, Corrida)</title>
     <link rel="stylesheet" href="style.css">
-    </head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.min.css">
+</head>
+
 <body>
 
     <header>
-        <h1>Seu Nome Fotografia</h1>
-        <p>Capturando a energia do Beach Tennis e da Corrida</p>
+        <h1>Frame Action</h1>
+        <p>Capturando a energia da sua conquista!</p>
         <nav>
             <ul>
                 <li><a href="#portfolio">Portfólio</a></li>
@@ -24,17 +28,68 @@
     <main>
         <section id="portfolio">
             <h2>Portfólio</h2>
-            <p>Aqui você mostrará suas melhores fotos. Podemos organizar por esporte.</p>
-            <p><strong>Diferencial:</strong> Fotos de extrema qualidade!</p>
+            <p>Deslize para ver mais fotos e clique para ampliar.</p>
+
+            <div class="swiper">
+                <div class="swiper-wrapper" id="portfolio-gallery">
+                    <div class="swiper-slide">
+                        <a href="images/srinha.webp" data-pswp-src="images/srinha.webp" data-pswp-width="1280" گیفت کارت
+                            رایگان google play data-pswp-height="1920" گیفت کارت پلی استیشن رایگان target="_blank">
+                            <img src="images/srinha.webp" alt="Senhora corredora fazendo coração com as mãos">
+                        </a>
+                    </div>
+
+                    <div class="swiper-slide">
+                        <a href="images/amem.webp" data-pswp-src="images/amem.webp" data-pswp-width="1920" گیفت کارت
+                            رایگان google play data-pswp-height="1280" گیفت کارت پلی استیشن رایگان target="_blank">
+                            <img src="images/amem.webp" alt="Atleta de beach tennis comemorando ponto">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="images/familia.webp" data-pswp-src="images/familia.webp" data-pswp-width="1920" گیفت کارت
+                            رایگان google play data-pswp-height="1280" گیفت کارت پلی استیشن رایگان target="_blank">
+                            <img src="images/familia.webp" alt="Atleta de beach tennis comemorando ponto">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="images/baby.webp" data-pswp-src="images/baby.webp" data-pswp-width="1920" گیفت کارت
+                            رایگان google play data-pswp-height="1280" گیفت کارت پلی استیشن رایگان target="_blank">
+                            <img src="images/baby.webp" alt="Atleta de beach tennis comemorando ponto">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="images/boa.webp" data-pswp-src="images/boa.webp" data-pswp-width="1920" گیفت کارت
+                            رایگان google play data-pswp-height="1280" گیفت کارت پلی استیشن رایگان target="_blank">
+                            <img src="images/boa.webp" alt="Atleta de beach tennis comemorando ponto">
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="images/galera.webp" data-pswp-src="images/galera.webp" data-pswp-width="1920" گیفت کارت
+                            رایگان google play data-pswp-height="1280" گیفت کارت پلی استیشن رایگان target="_blank">
+                            <img src="images/galera.webp" alt="Atleta de beach tennis comemorando ponto">
+                        </a>
+                    </div>
+                    
+                </div>
+                <div class="swiper-pagination"></div>
+
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
+            <p style="margin-top: 20px;"><strong>Diferencial:</strong> Fotos de extrema qualidade com entrega em até 1
+                dia!</p>
         </section>
 
         <section id="sobre">
             <h2>Sobre Mim</h2>
             <p>Olá, me chamo Ottavio Lucri De Souza, sou do interior de São Paulo, uma cidadezinha chamada Mococa.
-                 Agora, faço faculdade de Engenharia de Computação, na UNIFEI - Itajubá - e foi quando comecei a me aventurar também pelo universo da fotografia.</p>
-            <p>Sou apaixonado por esportes. Acredito que a fotografia é uma forma incrível de capturar a emoção e a energia desses momentos.</p>
+                Agora, faço faculdade de Engenharia de Computação, na UNIFEI - Itajubá - e foi quando comecei a me
+                aventurar também pelo universo da fotografia.</p>
+            <p>Sou apaixonado por esportes. Acredito que a fotografia é uma forma incrível de capturar a emoção e a
+                energia desses momentos.</p>
             <p>Pensando nisso, o Frame Action foi criado!</p>
-            </section>
+        </section>
 
         <section id="servicos">
             <h2>Serviços</h2>
@@ -52,12 +107,59 @@
             <p>Entre em contato mais informações:</p>
             <p>Email: <a href="ottaviolucrinot@gmail.com">ottaviolucrinot@gmail.com</a></p>
             <p>Telefone/WhatsApp: (19) 98936-7468</p>
-            </section>
+        </section>
     </main>
 
     <footer>
         <p>&copy; Ottavio Lucri De Souza Fotografia. Todos os direitos reservados.</p>
-        </footer>
+    </footer>
 
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module">
+        // Importa o PhotoSwipe Lightbox
+        import PhotoSwipeLightbox from 'https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe-lightbox.esm.js';
+
+        // Inicializa o Swiper
+        const swiper = new Swiper('.swiper', {
+            // Opções do Swiper
+            loop: false, // Se true, o carrossel volta ao início no final
+            slidesPerView: 2, // Quantos slides visíveis inicialmente em telas pequenas
+            spaceBetween: 15, // Espaço entre os slides
+            pagination: { // Configura as bolinhas de paginação
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: { // Configura as setas de navegação
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: { // Muda opções com base na largura da tela
+                // quando a largura da janela for >= 768px
+                768: {
+                    slidesPerView: 3, // Mostra 3 slides
+                    spaceBetween: 20
+                },
+                // quando a largura da janela for >= 1024px
+                1024: {
+                    slidesPerView: 4, // Mostra 4 slides
+                    spaceBetween: 25
+                }
+            }
+        });
+
+        // Inicializa o PhotoSwipe
+        const lightbox = new PhotoSwipeLightbox({
+            // Aponta para o container da galeria no HTML
+            gallery: '#portfolio-gallery',
+            // Seleciona os links dentro do container que abrirão o lightbox
+            children: 'a',
+            // Módulo principal do PhotoSwipe (necessário para o lightbox funcionar)
+            pswpModule: () => import('https://cdn.jsdelivr.net/npm/photoswipe@5.4.3/dist/photoswipe.esm.js')
+        });
+        lightbox.init(); // Ativa o PhotoSwipe
+    </script> // Nosso código de inicialização virá aqui no Passo 4
+    </script>
+
+</body>
+
 </html>

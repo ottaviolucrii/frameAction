@@ -6,96 +6,209 @@
 }
 
 body {
-    font-family: sans-serif; /* Escolheremos uma fonte melhor depois (ex: Google Fonts) */
+    font-family: sans-serif; /* Escolheremos uma fonte melhor depois */
     line-height: 1.6;
-    color: #333; /* Cor de texto padrão */
+    color: #333;
+    background-color: #fff;
 }
 
 /* --- Estilos do Cabeçalho (header) --- */
 header {
-    background-color: #f4f4f4; /* Cor de fundo exemplo */
+    background-color: #f4f4f4;
     padding: 20px;
     text-align: center;
+    border-bottom: 1px solid #ddd;
 }
 
 header h1 {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+    font-size: 2em;
+}
+
+header p {
+    margin-bottom: 15px;
+    color: #666;
+    font-style: italic;
 }
 
 header nav ul {
-    list-style: none; /* Remove bolinhas da lista */
-    padding: 10px 0;
+    list-style: none;
+    padding: 0;
 }
 
 header nav ul li {
-    display: inline; /* Coloca os itens do menu lado a lado */
+    display: inline-block;
     margin: 0 15px;
 }
 
 header nav ul li a {
-    text-decoration: none; /* Remove sublinhado dos links */
+    text-decoration: none;
     color: #333;
+    font-weight: bold;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a:focus {
+    color: #007bff;
+    border-bottom-color: #007bff;
 }
 
 /* --- Estilos do Conteúdo Principal (main) --- */
 main {
-    padding: 20px; /* Espaçamento interno */
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 main section {
-    margin-bottom: 40px; /* Espaço entre as seções */
-    padding-top: 60px; /* Espaço para compensar a navegação fixa (se fizermos) */
-    margin-top: -60px; /* Truque para o link interno # funcionar bem */
+    margin-bottom: 60px;
 }
 
 main h2 {
-    margin-bottom: 20px;
-    text-align: center; /* Centralizar títulos das seções */
-    color: #555;
+    font-size: 1.8em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #444;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
 }
 
-/* --- Estilos da Galeria (portfolio) --- */
-#portfolio .galeria {
-    /* Aqui definiremos o layout da galeria (ex: grid) */
-    /* Exemplo inicial:
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px; */
-}
+/* === ESTILOS ANTIGOS DA GALERIA GRID REMOVIDOS === */
+/* As regras #portfolio .galeria, #portfolio .foto-item, etc., foram apagadas */
 
-#portfolio .galeria img {
-    width: 100%; /* Faz a imagem ocupar a largura da coluna da galeria */
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Evita espaços extras abaixo da imagem */
-}
 
 /* --- Estilos dos Serviços (servicos) --- */
 #servicos ul {
-    list-style: disc; /* Estilo de marcador padrão */
-    margin-left: 20px; /* Recuo da lista */
+    list-style: none;
+    padding-left: 0;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#servicos ul li {
+    background-color: #f9f9f9;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 15px 20px;
+    margin-bottom: 10px;
 }
 
 /* --- Estilos do Contato (contato) --- */
+#contato {
+    text-align: center;
+}
+
 #contato p {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+#contato a {
+    color: #007bff;
+    text-decoration: none;
+}
+#contato a:hover {
+    text-decoration: underline;
 }
 
 /* --- Estilos do Rodapé (footer) --- */
 footer {
-    background-color: #333; /* Cor de fundo exemplo */
-    color: #fff; /* Cor do texto */
+    background-color: #333;
+    color: #ccc;
     text-align: center;
-    padding: 15px;
-    margin-top: 30px;
+    padding: 25px 20px;
+    margin-top: 50px;
+    font-size: 0.9em;
 }
 
-/* --- Responsividade (Exemplo básico) --- */
-/* Estilos para telas menores (ex: celulares) */
+/* --- Responsividade --- */
 @media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
     header nav ul li {
-        display: block; /* Itens do menu um abaixo do outro */
+        display: block;
         margin: 10px 0;
     }
 
-    /* Adicionar mais ajustes para telas menores aqui */
+    main {
+        padding: 20px 10px;
+    }
+
+    main h2 {
+        font-size: 1.5em;
+    }
+
+    /* Regras antigas da galeria responsiva REMOVIDAS daqui também */
+
+    #servicos ul {
+        max-width: 100%;
+    }
+
+    #contato p {
+        font-size: 1em;
+    }
+
+    footer {
+        padding: 20px 15px;
+        font-size: 0.8em;
+    }
+} /* Fim do @media */
+
+
+/* --- Estilos para Swiper e PhotoSwipe --- */
+/* (Estes são os estilos que DEVEM permanecer) */
+
+.swiper {
+  width: 100%;
+  padding: 10px 0 40px 0; /* Espaço abaixo para paginação/navegação */
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Adiciona uma altura mínima para garantir espaço mesmo antes da imagem carregar */
+  min-height: 200px; /* Mesma altura da imagem */
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 200px; /* Altura FIXA para as miniaturas (AJUSTE SE NECESSÁRIO) */
+  object-fit: cover; /* Faz a imagem cobrir a área, pode cortar */
+  /* object-fit: contain; */ /* Alternativa: Cabe inteiro, pode sobrar espaço */
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #eee; /* Cor de fundo enquanto imagem carrega */
+}
+
+/* Estilo opcional para botões de navegação e paginação */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #007bff;
+  transform: scale(0.7);
+}
+.swiper-button-next:after, /* :after é necessário para Swiper v8+ */
+.swiper-button-prev:after {
+    font-size: 40px !important; /* Ajusta o tamanho do ícone da seta se necessário */
+}
+
+
+.swiper-pagination-bullet-active {
+  background-color: #007bff;
+}
+
+/* Garante que o PhotoSwipe funcione corretamente */
+.pswp img {
+  max-width: none;
+  object-fit: contain;
 }
